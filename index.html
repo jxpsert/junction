@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Kruispunt</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+    <div id="junction">
+        <div id="top-left" class="traffic-light">
+            <div class="light red"></div>
+            <div class="light orange off"></div>
+            <div class="light green off"></div>
+        </div>
+        <div id="top-right" class="traffic-light">
+            <div class="light red"></div>
+            <div class="light orange off"></div>
+            <div class="light green off"></div>
+        </div>
+        <div id="bottom-left" class="traffic-light">
+            <div class="light red"></div>
+            <div class="light orange off"></div>
+            <div class="light green off"></div>
+        </div>
+        <div id="bottom-right" class="traffic-light">
+            <div class="light red"></div>
+            <div class="light orange off"></div>
+            <div class="light green off"></div>
+        </div>
+    </div>
+
+    <div id="controls">
+        <h1>Controls</h1>
+
+        <h3>Horizontal</h3>
+        <button onclick="horizontal.red();">Red</button>
+        <button onclick="horizontal.orange();">Orange</button>
+        <button onclick="horizontal.green();">Green</button>
+        <button onclick="horizontal.shiftToRed();">Shift to red</button>
+        <button onclick="horizontal.toggleFlash(Light.COLOURS.ORANGE);">Toggle flashing orange</button>
+
+        <h3>Vertical</h3>
+        <button onclick="vertical.red();">Red</button>
+        <button onclick="vertical.orange();">Orange</button>
+        <button onclick="vertical.green();">Green</button>
+        <button onclick="vertical.shiftToRed();">Shift to red</button>
+        <button onclick="vertical.toggleFlash(Light.COLOURS.ORANGE);">Toggle flashing orange</button>
+
+        <h3>Individual</h3>
+        <div id="controls-individual">
+            <div>
+                <h4>Top left</h4>
+                <button onclick="topLeft.red();">Red</button>
+                <button onclick="topLeft.orange();">Orange</button>
+                <button onclick="topLeft.green();">Green</button>
+                <button onclick="topLeft.shiftToRed();">Shift to red</button>
+                <button onclick="topLeft.toggleFlash(Light.COLOURS.ORANGE);">Toggle flashing orange</button>
+            </div>
+            <div>
+                <h4>Top right</h4>
+                <button onclick="topRight.red();">Red</button>
+                <button onclick="topRight.orange();">Orange</button>
+                <button onclick="topRight.green();">Green</button>
+                <button onclick="topRight.shiftToRed();">Shift to red</button>
+                <button onclick="topRight.toggleFlash(Light.COLOURS.ORANGE);">Toggle flashing orange</button>
+            </div>
+            <div>
+                <h4>Bottom left</h4>
+                <button onclick="bottomLeft.red();">Red</button>
+                <button onclick="bottomLeft.orange();">Orange</button>
+                <button onclick="bottomLeft.green();">Green</button>
+                <button onclick="bottomLeft.shiftToRed();">Shift to red</button>
+                <button onclick="bottomLeft.toggleFlash(Light.COLOURS.ORANGE);">Toggle flashing orange</button>
+            </div>
+            <div>
+                <h4>Bottom right</h4>
+                <button onclick="bottomRight.red();">Red</button>
+                <button onclick="bottomRight.orange();">Orange</button>
+                <button onclick="bottomRight.green();">Green</button>
+                <button onclick="bottomRight.shiftToRed();">Shift to red</button>
+                <button onclick="bottomRight.toggleFlash(Light.COLOURS.ORANGE);">Toggle flashing orange</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="Light.js"></script>
+    <script src="Direction.js"></script>
+    <script src="index.js" async defer></script>
+</body>
+
+</html>

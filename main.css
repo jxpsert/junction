@@ -1,0 +1,97 @@
+html,
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  font-family: "Open Sans";
+}
+
+#junction {
+  background-image: url("./kruispunt-01.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
+  aspect-ratio: 1/1;
+}
+
+#top-left {
+  position: relative;
+  top: 4%;
+  left: 24.25%;
+  /* transform: rotate(180deg); */
+}
+
+#top-right {
+  position: relative;
+  top: -5%;
+  left: 73.5%;
+  /* transform: rotate(-90deg); */
+}
+
+#bottom-left {
+  position: relative;
+  top: 29%;
+  left: 24.8%;
+  /* transform: rotate(90deg); */
+}
+
+#bottom-right {
+  position: relative;
+  top: 20.5%;
+  left: 71.5%;
+}
+
+.traffic-light {
+  width: 2.5%;
+  height: 9%;
+  background-color: black;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: auto;
+  grid-gap: 0.5rem;
+}
+
+.light {
+  border-radius: 50%;
+  width: 100%;
+  aspect-ratio: 1/1;
+  margin: auto;
+}
+
+.red {
+  background-color: red;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.green {
+  background-color: lime;
+}
+
+.off {
+  opacity: 0.25;
+}
+
+#controls {
+  position: absolute;
+  padding: 1em;
+  right: 0;
+  top: 2em;
+  width: 25em;
+  height: 80%;
+  background-color: lightgrey;
+  border-radius: 1em 0 0 1em;
+
+  -webkit-box-shadow: 10px 5px 6px 5px rgba(0, 0, 0, 0.35);
+  box-shadow: 10px 5px 6px 5px rgba(0, 0, 0, 0.35);
+}
+
+#controls-individual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
+  grid-template-rows: 1fr 1fr;
+}
