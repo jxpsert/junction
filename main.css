@@ -1,13 +1,16 @@
 html,
-body {
+body
+{
   height: 100vh;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 
   font-family: "Open Sans";
 }
 
-#junction {
+#junction
+{
   background-image: url("./kruispunt-01.png");
   background-repeat: no-repeat;
   background-size: contain;
@@ -15,34 +18,39 @@ body {
   aspect-ratio: 1/1;
 }
 
-#top-left {
+#top-left
+{
   position: relative;
   top: 4%;
   left: 24.25%;
   /* transform: rotate(180deg); */
 }
 
-#top-right {
+#top-right
+{
   position: relative;
   top: -5%;
   left: 73.5%;
   /* transform: rotate(-90deg); */
 }
 
-#bottom-left {
+#bottom-left
+{
   position: relative;
   top: 29%;
   left: 24.8%;
   /* transform: rotate(90deg); */
 }
 
-#bottom-right {
+#bottom-right
+{
   position: relative;
   top: 20.5%;
   left: 71.5%;
 }
 
-.traffic-light {
+.traffic-light
+{
   width: 2.5%;
   height: 9%;
   background-color: black;
@@ -52,30 +60,36 @@ body {
   grid-gap: 0.5rem;
 }
 
-.light {
+.light
+{
   border-radius: 50%;
   width: 100%;
   aspect-ratio: 1/1;
   margin: auto;
 }
 
-.red {
+.red
+{
   background-color: red;
 }
 
-.orange {
+.orange
+{
   background-color: orange;
 }
 
-.green {
+.green
+{
   background-color: lime;
 }
 
-.off {
+.off
+{
   opacity: 0.25;
 }
 
-#controls {
+#controls
+{
   position: absolute;
   padding: 1em;
   right: 0;
@@ -88,9 +102,48 @@ body {
   box-shadow: 10px 5px 6px 5px rgba(0, 0, 0, 0.35);
 }
 
-#controls-individual {
+#controls-individual
+{
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1em;
   grid-template-rows: 1fr 1fr;
+}
+
+@media only screen and (max-width: 600px)
+{
+  #junction
+  {
+    width: 100vw;
+    height: auto;
+  }
+
+  #controls
+  {
+    width: 100%;
+    border-radius: 0;
+    bottom: 0;
+    left: 0;
+    height: 35%;
+    top: auto;
+    overflow-y: scroll;
+    white-space: pre-line;
+  }
+
+  #controls-individual
+  {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
+  {
+    margin: 0;
+    padding: 0;
+  }
 }
